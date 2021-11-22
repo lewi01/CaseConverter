@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    margin-bottom: 1rem;
+    
+}
+.title h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+#text-converter{
+    font-size: .5rem;
+}
+.btn-holder{
+    margin-top: .5rem;
+}
+#upper-case, #lower-case, #proper-case, 
+#sentence-case{
+    background-color:#fdab7b;
+    border: none;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
