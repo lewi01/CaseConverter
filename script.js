@@ -14,8 +14,8 @@ document.getElementById("proper-case").addEventListener("click",function(){
     let result =[];
     for(let i=0;i<properSentence.length;i++){
         let firstLetter = 
-        properSentence[i].charAt(0).toUpperCase().
-        concat(properSentence[i].slice(1));
+        properSentence[i].charAt(0).toUpperCase() + 
+        properSentence[i].slice(1);
         result.push(firstLetter);  
     }
     textarea.value = result.join(' ')
@@ -23,13 +23,14 @@ document.getElementById("proper-case").addEventListener("click",function(){
 });
 
 document.getElementById("sentence-case").addEventListener("click",function(){
-   let sentence = textarea.value.toLowerCase().split('.');
-    let results =[];
+    let sentence = textarea.value.toLowerCase().split('. ');
+    let result =[];
     for(let i=0;i<sentence.length;i++){
-        let letter =
-         sentence[i].charAt(0).toUpperCase().concat(sentence[i].slice(1)); 
-        results.push(letter)
+        sentence[i] = 
+        sentence[i].charAt(0).toUpperCase() + 
+        sentence[i].slice(1);
+        result.push(sentence[i]);  
     }
-    textarea.value = results.join('.')
+    textarea.value = result.join('. ')
 
 });
