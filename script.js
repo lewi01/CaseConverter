@@ -9,6 +9,7 @@ document.getElementById("lower-case").addEventListener("click", function() {
     document.querySelector('textarea').value.toLowerCase();
 });
 let textarea = document.querySelector('textarea')
+
 document.getElementById("proper-case").addEventListener("click",function(){
     let properSentence = textarea.value.toLowerCase().split(' ');
     let result =[];
@@ -34,3 +35,24 @@ document.getElementById("sentence-case").addEventListener("click",function(){
     textarea.value = result.join('. ')
 
 });
+function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+  }
+
+document.getElementById("save-text-file").addEventListener("click",function(){
+    let savetext = textarea.value;
+    let file = document.getElementById("text-file").value;
+
+    download(file, savetext);
+},false);
+
+

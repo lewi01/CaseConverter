@@ -20,11 +20,14 @@
     margin-top: .5rem;
 }
 #upper-case, #lower-case, #proper-case, 
-#sentence-case{
+#sentence-case, #save-text-file{
     background-color:#fdab7b;
     border: none;
     padding: 1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 1rem;
+}
+.files{
+    margin-bottom: 1rem;
 }
